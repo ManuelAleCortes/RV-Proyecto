@@ -2095,7 +2095,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109271190}
   m_Layer: 0
-  m_Name: Escena de Jesus
+  m_Name: '************Escena de Jesus*************'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

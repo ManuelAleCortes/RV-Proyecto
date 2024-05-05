@@ -1893,7 +1893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2084393838}
   m_Layer: 0
-  m_Name: Escena Final
+  m_Name: '*************Escena Final*************'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
