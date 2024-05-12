@@ -27,12 +27,15 @@ public class GameMenuManager : MonoBehaviour
 
         if (menu.activeSelf) // Only update if the menu is active
         {
-            // Update menu position relative to player's head
-            menu.transform.position = head.position + head.forward * spawnDistance;
+            // Menu Positioning (Excluding Downward Movement)
+            Vector3 adjustedHeadPosition = head.position;
+            adjustedHeadPosition.y = 0; // Set the Y-axis to 0 to exclude downward movement
 
-            // Keep menu facing the player (excluding Y-axis)
-            menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
-            menu.transform.forward *= -1;
+            menu.transform.position = adjustedHeadPosition + head.forward * spawnDistance;
+
+            // Menu Facing (Including Upward Movement)
+            menu.transform.LookAt(head.position); // Use the full player's head position
+            menu.transform.forward *= -1; // Flip the menu's forward vector to face the player
         }
     }
 }
