@@ -9,9 +9,11 @@ public class GameMenuManager : MonoBehaviour
     public Transform head;
     public float spawnDistance = 2;
     public InputActionProperty showButton;
+
     void Start()
     {
-        
+        // Initialize menu state (e.g., hidden)
+        menu.SetActive(false);
     }
 
     // Update is called once per frame
@@ -19,13 +21,18 @@ public class GameMenuManager : MonoBehaviour
     {
         if (showButton.action.WasPressedThisFrame())
         {
+            // Toggle menu visibility
             menu.SetActive(!menu.activeSelf);
-
-            menu.transform.position = head.position + new Vector3(head.forward.x, 0, head.forward.z).normalized * spawnDistance;
-
         }
-        menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
-        menu.transform.forward *= -1;
-        
+
+        if (menu.activeSelf) // Only update if the menu is active
+        {
+            // Update menu position relative to player's head
+            menu.transform.position = head.position + head.forward * spawnDistance;
+
+            // Keep menu facing the player (excluding Y-axis)
+            menu.transform.LookAt(new Vector3(head.position.x, menu.transform.position.y, head.position.z));
+            menu.transform.forward *= -1;
+        }
     }
 }
