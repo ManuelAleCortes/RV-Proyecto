@@ -36,6 +36,9 @@ public class GameMenuManager : MonoBehaviour
             // Menu Facing (Including Upward Movement)
             menu.transform.LookAt(head.position); // Use the full player's head position
             menu.transform.forward *= -1; // Flip the menu's forward vector to face the player
+
+
         }
     }
+
 }
