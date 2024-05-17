@@ -6,6 +6,7 @@ public class DoorAnim : MonoBehaviour
 {
     private Animator animador;
     int numero;
+    public bool derecha;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,15 +25,29 @@ public class DoorAnim : MonoBehaviour
     public void Activar()
     {
         animador.enabled = true;
-        if (numero % 2 == 0)
-        {
-            animador.SetBool("DoorClosing", false);
+        if(derecha == true) {
+            if (numero % 2 == 0)
+            {
+                animador.SetBool("DoorClosing", false);
+            }
+            else
+            {
+                animador.SetBool("DoorClosing", true);
+            }
+            numero++;
         }
         else
         {
-            animador.SetBool("DoorClosing", true);
+            if (numero % 2 == 0)
+            {
+                animador.SetBool("DoorClosingLeft", false);
+            }
+            else
+            {
+                animador.SetBool("DoorClosingLeft", true);
+            }
+            numero++;
         }
-        numero++;
 
     }
 }
