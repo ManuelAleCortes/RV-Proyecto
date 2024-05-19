@@ -29,10 +29,12 @@ public class DoorAnim : MonoBehaviour
             if (numero % 2 == 0)
             {
                 animador.SetBool("DoorClosing", false);
+                GeneralSound.PlayDoorOpenSound();
             }
             else
             {
                 animador.SetBool("DoorClosing", true);
+                GeneralSound.PlayDoorCloseSound();
             }
             numero++;
         }
@@ -41,10 +43,12 @@ public class DoorAnim : MonoBehaviour
             if (numero % 2 == 0)
             {
                 animador.SetBool("DoorClosingLeft", false);
+                GeneralSound.PlayDoorOpenSound();
             }
             else
             {
                 animador.SetBool("DoorClosingLeft", true);
+                GeneralSound.PlayDoorCloseSound();
             }
             numero++;
         }

@@ -27,6 +27,7 @@ public class LightController : MonoBehaviour
         {
             lightObject.SetActive(false);
         }
+        GeneralSound.PlaySwitchSound();
         numero++;
     }
 }
