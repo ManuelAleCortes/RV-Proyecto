@@ -5,6 +5,7 @@ using UnityEngine;
 public class LightController : MonoBehaviour
 {
     public GameObject lightObject;
+    public GameObject canvasUi;
     int numero;
     // Start is called before the first frame update
     void Start()
@@ -22,12 +23,23 @@ public class LightController : MonoBehaviour
         if( numero % 2 == 0)
         {
             lightObject.SetActive(true);
+            canvasUi.SetActive(true);
         }
         else
         {
             lightObject.SetActive(false);
+            canvasUi.SetActive(false);
         }
         GeneralSound.PlaySwitchSound();
         numero++;
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        
     }
 }

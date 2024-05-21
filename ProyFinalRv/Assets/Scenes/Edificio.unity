@@ -6345,7 +6345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598815579406187037, guid: 18ddb545287c546e19cc77dc9fbb2189, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -6793,6 +6793,14 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 169302185}
+    - target: {fileID: 4838234076163460467, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4838234076163460467, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4963277867291795317, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -6861,6 +6869,22 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 169302185}
+    - target: {fileID: 6831573114182044071, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_Color.b
+      value: 0.64705884
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831573114182044071, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8509804
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831573114182044071, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831573114182044071, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6974822717368186382, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6877,6 +6901,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1641728744}
+    - target: {fileID: 7189810261603097815, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7219112898121670109, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6893,6 +6921,18 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 169302185}
+    - target: {fileID: 7552771994750240594, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552771994750240594, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7552771994750240594, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7646411202546849375, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -6969,6 +7009,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 625450329}
+    - target: {fileID: 8881230479252498234, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9054211185808238875, guid: eb028cb6f512d774c94b538cab3f34cc, type: 3}
       propertyPath: m_InteractionManager
       value: 
@@ -7003,6 +7047,10 @@ PrefabInstance:
       value: XR Origin (XR Rig)
       objectReference: {fileID: 0}
     - target: {fileID: 4998475372265326353, guid: 17b6bcafb1d6a1c44863d3827dd4110b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5210255229905359181, guid: 17b6bcafb1d6a1c44863d3827dd4110b, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -7054,6 +7102,10 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 169302185}
+    - target: {fileID: 6362714760438975257, guid: 17b6bcafb1d6a1c44863d3827dd4110b, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8673365691053478881, guid: 17b6bcafb1d6a1c44863d3827dd4110b, type: 3}
       propertyPath: m_InteractionManager
       value: 
