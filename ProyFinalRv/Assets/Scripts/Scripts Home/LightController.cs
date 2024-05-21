@@ -6,11 +6,15 @@ public class LightController : MonoBehaviour
 {
     public GameObject lightObject;
     public GameObject canvasUi;
-    int numero;
+    public int numero;
+    public bool visible;
+    public bool prendido;
     // Start is called before the first frame update
     void Start()
     {
         numero = 0;
+        visible = false;
+        prendido = false;
     }
 
     // Update is called once per frame
@@ -23,12 +27,14 @@ public class LightController : MonoBehaviour
         if( numero % 2 == 0)
         {
             lightObject.SetActive(true);
-            canvasUi.SetActive(true);
+            prendido = true;
+            
         }
         else
         {
             lightObject.SetActive(false);
-            canvasUi.SetActive(false);
+            prendido = false;
+            
         }
         GeneralSound.PlaySwitchSound();
         numero++;
@@ -36,10 +42,17 @@ public class LightController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        
+        if(other.CompareTag("MainCamera"))
+        {
+            canvasUi.SetActive(false);
+        }
+        else
+        {
+            canvasUi.SetActive(true);
+        }
     }
     private void OnTriggerExit(Collider other)
     {
-        
+        visible = false;
     }
 }
