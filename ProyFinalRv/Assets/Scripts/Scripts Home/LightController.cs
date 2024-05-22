@@ -28,31 +28,35 @@ public class LightController : MonoBehaviour
         {
             lightObject.SetActive(true);
             prendido = true;
-            
+            canvasUi.SetActive(true);
         }
         else
         {
             lightObject.SetActive(false);
             prendido = false;
-            
+            canvasUi.SetActive(false);
         }
         GeneralSound.PlaySwitchSound();
         numero++;
     }
-
-    private void OnTriggerStay(Collider other)
+    /*
+    public void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("MainCamera"))
+        if (other.CompareTag("MainCamera") || other.CompareTag("Player") || other.tag == "Player")
         {
-            canvasUi.SetActive(false);
+            canvasUi.SetActive(true);
+            //Debug.Log("Primero");
         }
         else
         {
-            canvasUi.SetActive(true);
+            canvasUi.SetActive(false);
+            //Debug.Log("Segundo");
         }
     }
     private void OnTriggerExit(Collider other)
     {
         visible = false;
+        Debug.Log("Cuarto");
     }
+    */
 }
