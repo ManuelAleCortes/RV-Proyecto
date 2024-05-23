@@ -15,6 +15,7 @@ public class LightController : MonoBehaviour
         numero = 0;
         visible = false;
         prendido = false;
+        canvasUi.SetActive(false);
     }
 
     // Update is called once per frame
