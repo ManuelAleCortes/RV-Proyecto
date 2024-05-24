@@ -104,7 +104,7 @@ public class ChangeMaterial : MonoBehaviour
         }
         else
         {
-            texto.SetText("Sección desconocida");
+            texto.SetText("Sección ");
         }
 
         if (numeroMaterial > 0 && numeroMaterial <= materiales.Length)
@@ -113,7 +113,7 @@ public class ChangeMaterial : MonoBehaviour
         }
         else
         {
-            texto2.SetText("Material desconocido");
+            texto2.SetText("Material ");
         }
     }
 }
