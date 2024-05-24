@@ -14,10 +14,10 @@ public class ChangeMaterial : MonoBehaviour
     public TextMeshProUGUI texto2;
 
     private string[] seccionesCasa = {
-        "TechoCasaInterior", "PisoGym", "ParedExteriorHome", "ParedesCuartoOficina",
-        "ParedesGym", "ParedesPasilloCocina", "MarcosPuertas", "ParedesSala",
-        "ParedesBathroom", "PasilloPatioAtras", "PisoSala", "PisoPasillo",
-        "PisoBathroom", "PisoCocina", "PisoOficina", "MarcoVentanaPared"
+        "Techo interior de la casa", "Piso de gimnasio", "Pared exterior de la casa", "Paredes de oficina",
+        "Paredes de gimnasio", "Pasillo de cocina", "Marcos de puertas", "Paredes de la sala",
+        "Paredes del baño", "Pasillo del patio", "Piso de la sala", "Piso del pasillo",
+        "Piso del baño", "Piso de cocina", "Piso de oficina", "Marco de ventanas pared"
     };
 
     private string[] materiales = {
