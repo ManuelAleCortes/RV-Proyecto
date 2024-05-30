@@ -19,15 +19,16 @@ public class GameMenuManager : MonoBehaviour
     
     void Update()
     {
+        
         if (showButton.action.WasPressedThisFrame())
         {
             
             menu.SetActive(!menu.activeSelf);
         }
-
+        /*
         if (menu.activeSelf) 
         {
-            
+            /*
             Vector3 adjustedHeadPosition = head.position;
             adjustedHeadPosition.y = 0; 
 
@@ -36,9 +37,10 @@ public class GameMenuManager : MonoBehaviour
             
             menu.transform.LookAt(head.position); 
             menu.transform.forward *= -1; 
-
+            
 
         }
+        */
     }
 
 }
