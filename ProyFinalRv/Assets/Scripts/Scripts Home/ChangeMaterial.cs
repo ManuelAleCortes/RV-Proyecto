@@ -24,11 +24,10 @@ public class ChangeMaterial : MonoBehaviour
     };
 
     private string[] seccionesCasaPiso2 = {
-        "Cuarto 1 paredes","baño 2","Cuarto 2 paredes", "suelo del balcón","cuarto 3 piso",
-        "Suelo del pasillo","cuarto 2 piso","pasillo","techo baranda",
-        "techo interior","piso baño","pared exterior piso 2",
-        "Marco de ventanas pared","marcos de puerta"
-
+        "Cuarto 2 paredes","Cuarto 1 paredes","suelo del balcón", "marco puertas","suelo pasillo",
+        "pared exterior casa","paredes pasillo","paredes baño","marco ventana",
+        "Suelo cuarto 3","Suelo cuarto 3","suelo baño",
+        "Borde baranda del balcon","Suelo cuarto 2", "Suelo cuarto 1"
     };
 
     private string[] materiales = {
