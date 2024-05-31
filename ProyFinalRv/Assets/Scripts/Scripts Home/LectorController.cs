@@ -5,7 +5,7 @@ using UnityEngine;
 public class LectorController : MonoBehaviour
 {
     public GameObject puerta;
-    private Animator puertaAnim;
+    public Animator puertaAnim;
     int numero;
     public bool derecha;
     // Start is called before the first frame update
@@ -36,20 +36,26 @@ public class LectorController : MonoBehaviour
                 else
                 {
                     puertaAnim.SetBool("DoorClosing", true);
+                    GeneralSound.PlayDoorCloseSound();
                 }
                 numero++;
             }
-            else
+            if (derecha == false)
+                puertaAnim.enabled = true;
             {
                 if (numero % 2 == 0)
                 {
+                    //DoorClosingLeft
                     puertaAnim.SetBool("DoorClosingLeft", false);
+                    
                     GeneralSound.PlayDoorOpenSound();
+                    
                 }
                 else
                 {
                     puertaAnim.SetBool("DoorClosingLeft", true);
                     GeneralSound.PlayDoorCloseSound();
+                    
                 }
                 numero++;
             }
