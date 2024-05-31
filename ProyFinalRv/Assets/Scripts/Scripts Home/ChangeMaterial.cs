@@ -17,17 +17,17 @@ public class ChangeMaterial : MonoBehaviour
     private int currentFloor = 1;
 
     private string[] seccionesCasaPiso1 = {
-        "Techo interior de la casa", "Piso de gimnasio", "Pared exterior piso 1", "Paredes de oficina",
+        "ninguna", "Piso de gimnasio", "Pared exterior piso 1", "Paredes de oficina",
         "Paredes de gimnasio", "Pasillo de cocina", "Marcos de puertas", "Paredes de la sala",
         "Paredes del baño", "Pasillo del patio", "Piso de la sala", "Piso del pasillo",
         "Piso del baño", "Piso de cocina", "Piso de oficina", "Marco de ventanas pared"
     };
 
     private string[] seccionesCasaPiso2 = {
-        "Cuarto 2 paredes","Cuarto 1 paredes","suelo del balcón", "marco puertas","suelo pasillo",
-        "pared exterior casa","paredes pasillo","paredes baño","marco ventana",
-        "Suelo cuarto 3","Suelo cuarto 3","suelo baño",
-        "Borde baranda del balcon","Suelo cuarto 2", "Suelo cuarto 1"
+        "Marco del balcon","Suelo pasillo","Suelo del balcón", "Suelo del baño","Suelo cuarto 2",
+        "Suelo cuarto 3","Paredes baño","paredes del pasillo","Paredes exteriores",
+        "Paredes cuarto 2","Paredes cuarto 3","Paredes cuarto 1",
+        "Borde de las puertas","Borde de las ventanas", "ninguno"
     };
 
     private string[] materiales = {
