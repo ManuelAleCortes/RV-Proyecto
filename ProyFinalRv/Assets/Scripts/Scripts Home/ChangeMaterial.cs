@@ -5,7 +5,8 @@ using TMPro;
 
 public class ChangeMaterial : MonoBehaviour
 {
-    public Renderer targetRenderer;
+    public Renderer targetRendererPiso1;
+    public Renderer targetRendererPiso2;
     public Material[] materialesNuevos;
 
     public int indexSeccionCasa = 1;
@@ -13,11 +14,21 @@ public class ChangeMaterial : MonoBehaviour
     public TextMeshProUGUI texto;
     public TextMeshProUGUI texto2;
 
-    private string[] seccionesCasa = {
-        "Techo interior de la casa", "Piso de gimnasio", "Pared exterior de la casa", "Paredes de oficina",
+    private int currentFloor = 1;
+
+    private string[] seccionesCasaPiso1 = {
+        "Techo interior de la casa", "Piso de gimnasio", "Pared exterior piso 1", "Paredes de oficina",
         "Paredes de gimnasio", "Pasillo de cocina", "Marcos de puertas", "Paredes de la sala",
         "Paredes del baño", "Pasillo del patio", "Piso de la sala", "Piso del pasillo",
         "Piso del baño", "Piso de cocina", "Piso de oficina", "Marco de ventanas pared"
+    };
+
+    private string[] seccionesCasaPiso2 = {
+        "Cuarto 1 paredes","baño 2","Cuarto 2 paredes", "suelo del balcón","cuarto 3 piso",
+        "Suelo del pasillo","cuarto 2 piso","pasillo","techo baranda",
+        "techo interior","piso baño","pared exterior piso 2",
+        "Marco de ventanas pared","marcos de puerta"
+
     };
 
     private string[] materiales = {
@@ -36,12 +47,16 @@ public class ChangeMaterial : MonoBehaviour
 
     public void ChangeMaterialOnClick()
     {
+        Renderer targetRenderer = currentFloor == 1 ? targetRendererPiso1 : targetRendererPiso2;
+
         if (targetRenderer != null)
         {
             // Obtener los materiales actuales del Renderer
             Material[] materials = targetRenderer.materials;
 
             // Verificar que el índice de la sección y el índice del material sean válidos
+            string[] seccionesCasa = currentFloor == 1 ? seccionesCasaPiso1 : seccionesCasaPiso2;
+
             if (indexSeccionCasa > 0 && indexSeccionCasa <= materials.Length &&
                 numeroMaterial > 0 && numeroMaterial <= materialesNuevos.Length)
             {
@@ -62,6 +77,7 @@ public class ChangeMaterial : MonoBehaviour
 
     public void SumarVarSeccion()
     {
+        string[] seccionesCasa = currentFloor == 1 ? seccionesCasaPiso1 : seccionesCasaPiso2;
         if (indexSeccionCasa < seccionesCasa.Length)
         {
             indexSeccionCasa++;
@@ -98,13 +114,15 @@ public class ChangeMaterial : MonoBehaviour
 
     private void UpdateTexts()
     {
+        string[] seccionesCasa = currentFloor == 1 ? seccionesCasaPiso1 : seccionesCasaPiso2;
+
         if (indexSeccionCasa > 0 && indexSeccionCasa <= seccionesCasa.Length)
         {
             texto.SetText(seccionesCasa[indexSeccionCasa - 1]);
         }
         else
         {
-            texto.SetText("Sección ");
+            texto.SetText("Sección desconocida");
         }
 
         if (numeroMaterial > 0 && numeroMaterial <= materiales.Length)
@@ -113,8 +131,22 @@ public class ChangeMaterial : MonoBehaviour
         }
         else
         {
-            texto2.SetText("Material ");
+            texto2.SetText("Material desconocido");
         }
+    }
+
+    public void SetPiso1()
+    {
+        currentFloor = 1;
+        indexSeccionCasa = 1;
+        UpdateTexts();
+    }
+
+    public void SetPiso2()
+    {
+        currentFloor = 2;
+        indexSeccionCasa = 1;
+        UpdateTexts();
     }
 }
 
