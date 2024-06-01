@@ -31,7 +31,7 @@ public class ChangeMaterial : MonoBehaviour
     };
 
     private string[] materiales = {
-        "gris", "Azul", "Rojo", "Verde", "Amarillo", "Naranja", "Café"
+        "Madera café", "Ladrillo", "Ladrillo tenue", "Madera naranja", "Madera roja", "Madera azul", "Tela azul"
     };
 
     private void Start()

@@ -8,6 +8,8 @@ public class LectorController : MonoBehaviour
     public Animator puertaAnim;
     int numero;
     public bool derecha;
+    public float delay = 3.0f; // Tiempo de espera en segundos
+    private bool puedeEjecutar = true; // Controla si la acción puede ejecutarse
     // Start is called before the first frame update
     void Start()
     {
@@ -23,73 +25,48 @@ public class LectorController : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("ObjetoDeseado"))
+        if (other.CompareTag("ObjetoDeseado") && puedeEjecutar)
         {
-            if (derecha == true) 
-            { 
-                puertaAnim.enabled = true;
-                if (numero % 2 == 0)
-                {
-                    puertaAnim.SetBool("DoorClosing", false);
-                        GeneralSound.PlayDoorOpenSound();
-                 }
-                else
-                {
-                    puertaAnim.SetBool("DoorClosing", true);
-                    GeneralSound.PlayDoorCloseSound();
-                }
-                numero++;
-            }
-            if (derecha == false)
-                puertaAnim.enabled = true;
-            {
-                if (numero % 2 == 0)
-                {
-                    //DoorClosingLeft
-                    puertaAnim.SetBool("DoorClosingLeft", false);
-                    
-                    GeneralSound.PlayDoorOpenSound();
-                    
-                }
-                else
-                {
-                    puertaAnim.SetBool("DoorClosingLeft", true);
-                    GeneralSound.PlayDoorCloseSound();
-                    
-                }
-                numero++;
-            }
+            StartCoroutine(ActivarPuerta());
         }
-        /*
-        animador.enabled = true;
-        if (derecha == true)
+    }
+    private IEnumerator ActivarPuerta()
+    {
+        puedeEjecutar = false;
+
+        if (derecha)
         {
+            puertaAnim.enabled = true;
             if (numero % 2 == 0)
             {
-                animador.SetBool("DoorClosing", false);
+                puertaAnim.SetBool("DoorClosing", false);
                 GeneralSound.PlayDoorOpenSound();
             }
             else
             {
-                animador.SetBool("DoorClosing", true);
+                puertaAnim.SetBool("DoorClosing", true);
                 GeneralSound.PlayDoorCloseSound();
             }
             numero++;
         }
         else
         {
+            puertaAnim.enabled = true;
             if (numero % 2 == 0)
             {
-                animador.SetBool("DoorClosingLeft", false);
+                puertaAnim.SetBool("DoorClosingLeft", false);
                 GeneralSound.PlayDoorOpenSound();
             }
             else
             {
-                animador.SetBool("DoorClosingLeft", true);
+                puertaAnim.SetBool("DoorClosingLeft", true);
                 GeneralSound.PlayDoorCloseSound();
             }
             numero++;
         }
-        */
+
+        yield return new WaitForSeconds(delay); // Espera el tiempo especificado
+
+        puedeEjecutar = true; // Permite que la acción se ejecute nuevamente
     }
 }
