@@ -41,7 +41,7 @@ public class ChangeMaterial : MonoBehaviour
 
     private void Update()
     {
-        // Los textos se actualizan automáticamente en cada cambio de índice
+        
     }
 
     public void ChangeMaterialOnClick()
@@ -50,16 +50,16 @@ public class ChangeMaterial : MonoBehaviour
 
         if (targetRenderer != null)
         {
-            // Obtener los materiales actuales del Renderer
+            
             Material[] materials = targetRenderer.materials;
 
-            // Verificar que el índice de la sección y el índice del material sean válidos
+            
             string[] seccionesCasa = currentFloor == 1 ? seccionesCasaPiso1 : seccionesCasaPiso2;
 
             if (indexSeccionCasa > 0 && indexSeccionCasa <= materials.Length &&
                 numeroMaterial > 0 && numeroMaterial <= materialesNuevos.Length)
             {
-                // Aplicar el material seleccionado a la sección correspondiente
+                
                 materials[indexSeccionCasa - 1] = materialesNuevos[numeroMaterial - 1];
                 targetRenderer.materials = materials;
             }
